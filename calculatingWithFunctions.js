@@ -1,4 +1,4 @@
-This time we want to write calculations using functions and get the results. Let's have a look at some examples:
+This time we want to write calculations using functions and get the results. Here are some examples:
 
 seven(times(five())); // must return 35
 four(plus(nine())); // must return 13
