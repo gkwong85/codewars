@@ -17,26 +17,10 @@
 // validBraces( "([{}])" ) => returns true 
 
 function validBraces(braces){
-  
-  var check = braces.split("");
-  
-  if(check.length === 0){
-    return true;
+
+  while(braces.indexOf("()") != -1 || braces.indexOf("{}") != -1 || braces.indexOf("[]") != -1){
+    braces.replace("()", "").replace("{}", "").replace("[]", "");
   }
   
-  for(var i = 0; i < check.length; i++){
-    if(check[i] === "(" && check[i+1] === ")"){
-      check.splice(i, 2);
-      return validBraces(check.join(""));
-    }
-    if(check[i] === "[" && check[i+1] === "]"){
-      check.splice(i, 2);
-      return validBraces(check.join(""));
-    }
-    if(check[i] === "{" && check[i+1] === "}"){
-      check.splice(i, 2);
-      return validBraces(check.join(""));    
-    }
-  }
-  return false;
+  return braces.length === 0;
 }  
