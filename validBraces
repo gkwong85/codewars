@@ -19,7 +19,7 @@
 function validBraces(braces){
 
   while(braces.indexOf("()") != -1 || braces.indexOf("{}") != -1 || braces.indexOf("[]") != -1){
-    braces.replace("()", "").replace("{}", "").replace("[]", "");
+    braces = braces.replace("()", "").replace("{}", "").replace("[]", "");
   }
   
   return braces.length === 0;
