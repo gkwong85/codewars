@@ -56,7 +56,7 @@ function formatDuration(seconds) {
     var days = Math.floor(seconds % (365*24*60*60) / (24*60*60));
     var hours = Math.floor(seconds % (365*24*60*60) % (24*60*60) / (60*60));
     var minutes = Math.floor(seconds % (365*24*60*60) % (24*60*60) % (60*60) / 60);
-    seconds = seconds - (365*24*60*60)*years - (24*60*60)*days - (60*60)*hours - 60*minutes
+    seconds = seconds - (365*24*60*60)*years - (24*60*60)*days - (60*60)*hours - 60*minutes;
     var y = years + " year" + plural(years);
     var d = days + " day" + plural(days);
     var h = hours + " hour" + plural(hours);
